@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ULB-N0-9Xj">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wotbag Browser View Controller-->
+        <scene sceneID="bjk-6F-8gJ">
+            <objects>
+                <tableViewController id="eUM-sM-s50" userLabel="Wotbag Browser View Controller" customClass="WotabagBrowserViewController" customModule="wotabag_remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b3u-1u-Ed7" userLabel="Wotabag Browser Table">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WotabagBrowserTableViewCell" id="cB8-CY-91m" userLabel="WotabagBrowserTableViewCell" customClass="WotabagBrowserTableViewCell" customModule="wotabag_remote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cB8-CY-91m" id="twJ-RY-zyk" userLabel="Wotabag Browser Cell Content View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wotabag Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dh-UF-utE">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9dh-UF-utE" firstAttribute="top" secondItem="twJ-RY-zyk" secondAttribute="topMargin" id="0D7-g8-9g5"/>
+                                        <constraint firstItem="9dh-UF-utE" firstAttribute="leading" secondItem="twJ-RY-zyk" secondAttribute="leadingMargin" id="kwE-fq-afZ"/>
+                                        <constraint firstItem="9dh-UF-utE" firstAttribute="centerY" secondItem="twJ-RY-zyk" secondAttribute="centerY" id="mtd-ag-cOj"/>
+                                        <constraint firstItem="9dh-UF-utE" firstAttribute="trailing" secondItem="twJ-RY-zyk" secondAttribute="trailingMargin" id="w3F-jo-DDO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="wotabagLabel" destination="9dh-UF-utE" id="a7d-hr-ldQ"/>
+                                    <segue destination="etz-Vb-RTV" kind="show" identifier="ShowWotabag" id="KKl-RU-sMg"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eUM-sM-s50" id="lDJ-Ud-tGw"/>
+                            <outlet property="delegate" destination="eUM-sM-s50" id="Elu-E2-2aL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Nearby Wotabags" id="U7I-RA-RhV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZwC-WJ-3Nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-914.39999999999998" y="-429.53523238380814"/>
+        </scene>
+        <!--Wotabag Remote View Controller-->
+        <scene sceneID="kTr-6C-iBx">
+            <objects>
+                <viewController id="etz-Vb-RTV" userLabel="Wotabag Remote View Controller" customClass="WotabagRemoteViewController" customModule="wotabag_remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grg-vM-OtS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBl-P8-3Jd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JbA-ij-wxr">
+                                        <rect key="frame" x="16" y="16" width="343" height="232"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMh-QV-LSA" userLabel="Status Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-Fb-AY5" userLabel="Track label">
+                                                <rect key="frame" x="0.0" y="20.5" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPF-vX-MOE" userLabel="Volume Label">
+                                                <rect key="frame" x="0.0" y="41" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="speaker.fill" catalog="system" maximumValueImage="speaker.3.fill" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-1q-5yw" userLabel="Volume Slider">
+                                                <rect key="frame" x="-2" y="61.5" width="347" height="31"/>
+                                                <connections>
+                                                    <action selector="wotabagVolumeSliderChanged:" destination="etz-Vb-RTV" eventType="valueChanged" id="3hF-ra-glU"/>
+                                                </connections>
+                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RCL-K0-s0l">
+                                                <rect key="frame" x="0.0" y="91.5" width="343" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-Tr-cvV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Test LEDs"/>
+                                                        <connections>
+                                                            <action selector="wotabagTestPatternButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="LTQ-ZF-qYu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HMq-ui-fgf">
+                                                <rect key="frame" x="0.0" y="135.5" width="343" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="NONE" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhe-4J-v1b" userLabel="Color Picker Text Field">
+                                                        <rect key="frame" x="0.0" y="0.0" width="243" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="wotabagColorPickerDidBeginEditing:" destination="etz-Vb-RTV" eventType="editingDidBegin" id="PoL-hT-VVr"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02K-jM-k79">
+                                                        <rect key="frame" x="243" y="0.0" width="100" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Set color"/>
+                                                        <connections>
+                                                            <action selector="wotabagSetColorButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="O7V-FR-dpW"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-Xf-dKn">
+                                                <rect key="frame" x="0.0" y="179.5" width="343" height="32"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0Y-XW-kpo" userLabel="Play Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Play" image="play.circle" catalog="system">
+                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="wotabagPlayButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="BSI-PF-XIq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CdV-ju-YUc" userLabel="Stop Button">
+                                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="32"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Stop" image="stop.circle" catalog="system">
+                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="wotabagStopButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="qPv-19-YtC"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Available songs:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flb-ui-TWH">
+                                                <rect key="frame" x="0.0" y="211.5" width="343" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fss-Qg-7il">
+                                        <rect key="frame" x="16" y="248" width="343" height="427"/>
+                                        <connections>
+                                            <segue destination="KO2-V8-pHf" kind="embed" identifier="WotabagPlaylistSegue" id="1x8-op-9q7"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="heX-Ic-0PL" firstAttribute="bottom" secondItem="Fss-Qg-7il" secondAttribute="bottom" constant="16" id="6Lb-p9-7AI"/>
+                                    <constraint firstItem="Fss-Qg-7il" firstAttribute="centerX" secondItem="MBl-P8-3Jd" secondAttribute="centerX" id="9UG-og-gSG"/>
+                                    <constraint firstAttribute="bottom" secondItem="JbA-ij-wxr" secondAttribute="bottom" constant="443" id="9iQ-pR-FmB"/>
+                                    <constraint firstItem="JbA-ij-wxr" firstAttribute="centerX" secondItem="MBl-P8-3Jd" secondAttribute="centerX" id="Crs-LW-nYX"/>
+                                    <constraint firstItem="JbA-ij-wxr" firstAttribute="top" secondItem="MBl-P8-3Jd" secondAttribute="topMargin" constant="8" id="Ed5-Oy-EpC"/>
+                                    <constraint firstItem="Fss-Qg-7il" firstAttribute="top" secondItem="JbA-ij-wxr" secondAttribute="bottom" id="GwI-aW-yWx"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="JbA-ij-wxr" secondAttribute="trailing" constant="8" id="Uoi-Z1-Ljp"/>
+                                    <constraint firstItem="heX-Ic-0PL" firstAttribute="trailing" secondItem="Fss-Qg-7il" secondAttribute="trailing" constant="16" id="hMa-52-dzd"/>
+                                    <constraint firstItem="JbA-ij-wxr" firstAttribute="leading" secondItem="MBl-P8-3Jd" secondAttribute="leadingMargin" constant="8" id="nne-kZ-hmR"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="heX-Ic-0PL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="fau-eM-nyj"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MBl-P8-3Jd" firstAttribute="top" secondItem="STT-B3-JyQ" secondAttribute="top" id="Dyo-JW-vAE"/>
+                            <constraint firstItem="MBl-P8-3Jd" firstAttribute="centerX" secondItem="grg-vM-OtS" secondAttribute="centerX" id="ZB3-Fa-BLd"/>
+                            <constraint firstItem="MBl-P8-3Jd" firstAttribute="bottom" secondItem="STT-B3-JyQ" secondAttribute="bottom" id="kAf-Hd-7pc"/>
+                            <constraint firstItem="MBl-P8-3Jd" firstAttribute="leading" secondItem="STT-B3-JyQ" secondAttribute="leading" id="q1O-wj-59Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="STT-B3-JyQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Wotabag Name" id="t7n-vd-c9e" userLabel="Wotabag Name">
+                        <barButtonItem key="rightBarButtonItem" title="Power off" image="power" catalog="system" id="y96-k1-XUX">
+                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="wotabagPowerButtonTouchUp:" destination="etz-Vb-RTV" id="t2F-c5-rr9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="wotabagColorPickerTextField" destination="vhe-4J-v1b" id="YtV-rC-riO"/>
+                        <outlet property="wotabagRunTestsButton" destination="Eyh-Tr-cvV" id="bxM-W8-cB0"/>
+                        <outlet property="wotabagScrollView" destination="MBl-P8-3Jd" id="yeU-Bz-fZS"/>
+                        <outlet property="wotabagStatusLabel" destination="DMh-QV-LSA" id="6pW-Yj-JV4"/>
+                        <outlet property="wotabagTitleItem" destination="t7n-vd-c9e" id="bcP-bl-MRy"/>
+                        <outlet property="wotabagTrackLabel" destination="6oj-Fb-AY5" id="3pL-G1-H37"/>
+                        <outlet property="wotabagVolumeLabel" destination="fPF-vX-MOE" id="Utd-3R-O4Q"/>
+                        <outlet property="wotabagVolumeSlider" destination="sOb-1q-5yw" id="dOF-lx-ype"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2ub-js-uws" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61.600000000000001" y="-433.13343328335833"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F7v-Ri-Eyp">
+            <objects>
+                <navigationController id="ULB-N0-9Xj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="aDF-FY-r2k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eUM-sM-s50" kind="relationship" relationship="rootViewController" id="WCe-fF-qNU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nm-AR-0HR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1830" y="-429"/>
+        </scene>
+        <!--Wotabag Playlist View Controller-->
+        <scene sceneID="euq-ze-qJA">
+            <objects>
+                <tableViewController id="KO2-V8-pHf" customClass="WotabagPlaylistViewController" customModule="wotabag_remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IfQ-TY-MNp">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="427"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WotabagTracklistCell" id="4VD-Uu-xjA" customClass="WotabagTracklistCell" customModule="wotabag_remote" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="343" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4VD-Uu-xjA" id="bQa-Ip-WOa">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AcK-ng-Obh" userLabel="Tracklist Track Label">
+                                            <rect key="frame" x="16" y="0.0" width="311" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="wotabagTracklistLabel" destination="AcK-ng-Obh" id="fGw-tv-ceT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="KO2-V8-pHf" id="pxz-bS-1Us"/>
+                            <outlet property="delegate" destination="KO2-V8-pHf" id="Wo8-5V-XUR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8an-Hq-69V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.200000000000003" y="225.33733133433284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.circle" catalog="system" width="64" height="62"/>
+        <image name="power" catalog="system" width="62" height="64"/>
+        <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
+        <image name="speaker.fill" catalog="system" width="50" height="64"/>
+        <image name="stop.circle" catalog="system" width="64" height="62"/>
+    </resources>
+</document>

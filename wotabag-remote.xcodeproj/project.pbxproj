@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA02380122F13E9C003B4AF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02380022F13E9C003B4AF0 /* AppDelegate.swift */; };
+		BA02380322F13E9C003B4AF0 /* WotabagBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02380222F13E9C003B4AF0 /* WotabagBrowserViewController.swift */; };
+		BA02380622F13E9C003B4AF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA02380422F13E9C003B4AF0 /* Main.storyboard */; };
+		BA02380822F13E9C003B4AF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA02380722F13E9C003B4AF0 /* Assets.xcassets */; };
+		BA02380B22F13E9C003B4AF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA02380922F13E9C003B4AF0 /* LaunchScreen.storyboard */; };
+		BA02381622F13E9C003B4AF0 /* wotabag_remoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02381522F13E9C003B4AF0 /* wotabag_remoteTests.swift */; };
+		BA02382122F13E9D003B4AF0 /* wotabag_remoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02382022F13E9D003B4AF0 /* wotabag_remoteUITests.swift */; };
+		BA5E8B4D230A67D0001EA871 /* JSONRPCKit in Frameworks */ = {isa = PBXBuildFile; productRef = BA5E8B4C230A67D0001EA871 /* JSONRPCKit */; };
+		BA5E8B4F230A694A001EA871 /* WotabagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5E8B4E230A694A001EA871 /* WotabagService.swift */; };
+		BA85B1942302CE94003256DD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85B1912302CE94003256DD /* Message.swift */; };
+		BA85B1952302CE94003256DD /* MessageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85B1922302CE94003256DD /* MessageReceiver.swift */; };
+		BA85B1962302CE94003256DD /* Datagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA85B1932302CE94003256DD /* Datagram.swift */; };
+		BA9C89BB2313CEE20024A81C /* WotabagTracklistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C89BA2313CEE20024A81C /* WotabagTracklistCell.swift */; };
+		BA9C89BD2313D5960024A81C /* WotabagPlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C89BC2313D5960024A81C /* WotabagPlaylistViewController.swift */; };
+		BAD4589922FD3DA500929DFA /* WotabagRemoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4589822FD3DA500929DFA /* WotabagRemoteViewController.swift */; };
+		BAD4589B22FD432400929DFA /* WotabagBrowserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4589A22FD432400929DFA /* WotabagBrowserTableViewCell.swift */; };
+		BAD4589D22FD492700929DFA /* Wotabag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4589C22FD492700929DFA /* Wotabag.swift */; };
+		BAD4589F22FD663200929DFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4589E22FD663200929DFA /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA02381222F13E9C003B4AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA0237F522F13E9C003B4AF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA0237FC22F13E9C003B4AF0;
+			remoteInfo = "wotabag-remote";
+		};
+		BA02381D22F13E9D003B4AF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA0237F522F13E9C003B4AF0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA0237FC22F13E9C003B4AF0;
+			remoteInfo = "wotabag-remote";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BA0237FD22F13E9C003B4AF0 /* wotabag-remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wotabag-remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA02380022F13E9C003B4AF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA02380222F13E9C003B4AF0 /* WotabagBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagBrowserViewController.swift; sourceTree = "<group>"; };
+		BA02380522F13E9C003B4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA02380722F13E9C003B4AF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA02380A22F13E9C003B4AF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA02380C22F13E9C003B4AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA02381122F13E9C003B4AF0 /* wotabag-remoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wotabag-remoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA02381522F13E9C003B4AF0 /* wotabag_remoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wotabag_remoteTests.swift; sourceTree = "<group>"; };
+		BA02381722F13E9C003B4AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA02381C22F13E9D003B4AF0 /* wotabag-remoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wotabag-remoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA02382022F13E9D003B4AF0 /* wotabag_remoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wotabag_remoteUITests.swift; sourceTree = "<group>"; };
+		BA02382222F13E9D003B4AF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA5E8B4E230A694A001EA871 /* WotabagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagService.swift; sourceTree = "<group>"; };
+		BA85B1912302CE94003256DD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		BA85B1922302CE94003256DD /* MessageReceiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageReceiver.swift; sourceTree = "<group>"; };
+		BA85B1932302CE94003256DD /* Datagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datagram.swift; sourceTree = "<group>"; };
+		BA9C89BA2313CEE20024A81C /* WotabagTracklistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagTracklistCell.swift; sourceTree = "<group>"; };
+		BA9C89BC2313D5960024A81C /* WotabagPlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagPlaylistViewController.swift; sourceTree = "<group>"; };
+		BAD4589822FD3DA500929DFA /* WotabagRemoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagRemoteViewController.swift; sourceTree = "<group>"; };
+		BAD4589A22FD432400929DFA /* WotabagBrowserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WotabagBrowserTableViewCell.swift; sourceTree = "<group>"; };
+		BAD4589C22FD492700929DFA /* Wotabag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wotabag.swift; sourceTree = "<group>"; };
+		BAD4589E22FD663200929DFA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA0237FA22F13E9C003B4AF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA5E8B4D230A67D0001EA871 /* JSONRPCKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02380E22F13E9C003B4AF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02381922F13E9D003B4AF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BA0237F422F13E9C003B4AF0 = {
+			isa = PBXGroup;
+			children = (
+				BA0237FF22F13E9C003B4AF0 /* wotabag-remote */,
+				BA02381422F13E9C003B4AF0 /* wotabag-remoteTests */,
+				BA02381F22F13E9D003B4AF0 /* wotabag-remoteUITests */,
+				BA0237FE22F13E9C003B4AF0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BA0237FE22F13E9C003B4AF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA0237FD22F13E9C003B4AF0 /* wotabag-remote.app */,
+				BA02381122F13E9C003B4AF0 /* wotabag-remoteTests.xctest */,
+				BA02381C22F13E9D003B4AF0 /* wotabag-remoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA0237FF22F13E9C003B4AF0 /* wotabag-remote */ = {
+			isa = PBXGroup;
+			children = (
+				BA85B1902302CDE7003256DD /* SDP */,
+				BA02380022F13E9C003B4AF0 /* AppDelegate.swift */,
+				BA02380222F13E9C003B4AF0 /* WotabagBrowserViewController.swift */,
+				BAD4589A22FD432400929DFA /* WotabagBrowserTableViewCell.swift */,
+				BA9C89BA2313CEE20024A81C /* WotabagTracklistCell.swift */,
+				BAD4589E22FD663200929DFA /* Constants.swift */,
+				BAD4589822FD3DA500929DFA /* WotabagRemoteViewController.swift */,
+				BA9C89BC2313D5960024A81C /* WotabagPlaylistViewController.swift */,
+				BAD4589C22FD492700929DFA /* Wotabag.swift */,
+				BA02380722F13E9C003B4AF0 /* Assets.xcassets */,
+				BA02380422F13E9C003B4AF0 /* Main.storyboard */,
+				BA02380922F13E9C003B4AF0 /* LaunchScreen.storyboard */,
+				BA02380C22F13E9C003B4AF0 /* Info.plist */,
+				BA5E8B4E230A694A001EA871 /* WotabagService.swift */,
+			);
+			path = "wotabag-remote";
+			sourceTree = "<group>";
+		};
+		BA02381422F13E9C003B4AF0 /* wotabag-remoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA02381522F13E9C003B4AF0 /* wotabag_remoteTests.swift */,
+				BA02381722F13E9C003B4AF0 /* Info.plist */,
+			);
+			path = "wotabag-remoteTests";
+			sourceTree = "<group>";
+		};
+		BA02381F22F13E9D003B4AF0 /* wotabag-remoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA02382022F13E9D003B4AF0 /* wotabag_remoteUITests.swift */,
+				BA02382222F13E9D003B4AF0 /* Info.plist */,
+			);
+			path = "wotabag-remoteUITests";
+			sourceTree = "<group>";
+		};
+		BA85B1902302CDE7003256DD /* SDP */ = {
+			isa = PBXGroup;
+			children = (
+				BA85B1932302CE94003256DD /* Datagram.swift */,
+				BA85B1912302CE94003256DD /* Message.swift */,
+				BA85B1922302CE94003256DD /* MessageReceiver.swift */,
+			);
+			path = SDP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA0237FC22F13E9C003B4AF0 /* wotabag-remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA02382522F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remote" */;
+			buildPhases = (
+				BA0237F922F13E9C003B4AF0 /* Sources */,
+				BA0237FA22F13E9C003B4AF0 /* Frameworks */,
+				BA0237FB22F13E9C003B4AF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "wotabag-remote";
+			packageProductDependencies = (
+				BA5E8B4C230A67D0001EA871 /* JSONRPCKit */,
+			);
+			productName = "wotabag-remote";
+			productReference = BA0237FD22F13E9C003B4AF0 /* wotabag-remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA02381022F13E9C003B4AF0 /* wotabag-remoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA02382822F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remoteTests" */;
+			buildPhases = (
+				BA02380D22F13E9C003B4AF0 /* Sources */,
+				BA02380E22F13E9C003B4AF0 /* Frameworks */,
+				BA02380F22F13E9C003B4AF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA02381322F13E9C003B4AF0 /* PBXTargetDependency */,
+			);
+			name = "wotabag-remoteTests";
+			productName = "wotabag-remoteTests";
+			productReference = BA02381122F13E9C003B4AF0 /* wotabag-remoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA02381B22F13E9D003B4AF0 /* wotabag-remoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA02382B22F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remoteUITests" */;
+			buildPhases = (
+				BA02381822F13E9D003B4AF0 /* Sources */,
+				BA02381922F13E9D003B4AF0 /* Frameworks */,
+				BA02381A22F13E9D003B4AF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA02381E22F13E9D003B4AF0 /* PBXTargetDependency */,
+			);
+			name = "wotabag-remoteUITests";
+			productName = "wotabag-remoteUITests";
+			productReference = BA02381C22F13E9D003B4AF0 /* wotabag-remoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA0237F522F13E9C003B4AF0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Peter Rowlands";
+				TargetAttributes = {
+					BA0237FC22F13E9C003B4AF0 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					BA02381022F13E9C003B4AF0 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = BA0237FC22F13E9C003B4AF0;
+					};
+					BA02381B22F13E9D003B4AF0 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = BA0237FC22F13E9C003B4AF0;
+					};
+				};
+			};
+			buildConfigurationList = BA0237F822F13E9C003B4AF0 /* Build configuration list for PBXProject "wotabag-remote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA0237F422F13E9C003B4AF0;
+			packageReferences = (
+				BA5E8B4B230A67D0001EA871 /* XCRemoteSwiftPackageReference "JSONRPCKit" */,
+			);
+			productRefGroup = BA0237FE22F13E9C003B4AF0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA0237FC22F13E9C003B4AF0 /* wotabag-remote */,
+				BA02381022F13E9C003B4AF0 /* wotabag-remoteTests */,
+				BA02381B22F13E9D003B4AF0 /* wotabag-remoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA0237FB22F13E9C003B4AF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA02380B22F13E9C003B4AF0 /* LaunchScreen.storyboard in Resources */,
+				BA02380822F13E9C003B4AF0 /* Assets.xcassets in Resources */,
+				BA02380622F13E9C003B4AF0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02380F22F13E9C003B4AF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02381A22F13E9D003B4AF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA0237F922F13E9C003B4AF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA9C89BD2313D5960024A81C /* WotabagPlaylistViewController.swift in Sources */,
+				BAD4589B22FD432400929DFA /* WotabagBrowserTableViewCell.swift in Sources */,
+				BA02380322F13E9C003B4AF0 /* WotabagBrowserViewController.swift in Sources */,
+				BA85B1952302CE94003256DD /* MessageReceiver.swift in Sources */,
+				BA02380122F13E9C003B4AF0 /* AppDelegate.swift in Sources */,
+				BAD4589D22FD492700929DFA /* Wotabag.swift in Sources */,
+				BAD4589922FD3DA500929DFA /* WotabagRemoteViewController.swift in Sources */,
+				BA85B1962302CE94003256DD /* Datagram.swift in Sources */,
+				BAD4589F22FD663200929DFA /* Constants.swift in Sources */,
+				BA85B1942302CE94003256DD /* Message.swift in Sources */,
+				BA9C89BB2313CEE20024A81C /* WotabagTracklistCell.swift in Sources */,
+				BA5E8B4F230A694A001EA871 /* WotabagService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02380D22F13E9C003B4AF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA02381622F13E9C003B4AF0 /* wotabag_remoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA02381822F13E9D003B4AF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA02382122F13E9D003B4AF0 /* wotabag_remoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA02381322F13E9C003B4AF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA0237FC22F13E9C003B4AF0 /* wotabag-remote */;
+			targetProxy = BA02381222F13E9C003B4AF0 /* PBXContainerItemProxy */;
+		};
+		BA02381E22F13E9D003B4AF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA0237FC22F13E9C003B4AF0 /* wotabag-remote */;
+			targetProxy = BA02381D22F13E9D003B4AF0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA02380422F13E9C003B4AF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA02380522F13E9C003B4AF0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA02380922F13E9C003B4AF0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA02380A22F13E9C003B4AF0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA02382322F13E9D003B4AF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA02382422F13E9D003B4AF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA02382622F13E9D003B4AF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA02382722F13E9D003B4AF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA02382922F13E9D003B4AF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wotabag-remote.app/wotabag-remote";
+			};
+			name = Debug;
+		};
+		BA02382A22F13E9D003B4AF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remoteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wotabag-remote.app/wotabag-remote";
+			};
+			name = Release;
+		};
+		BA02382C22F13E9D003B4AF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wotabag-remote";
+			};
+			name = Debug;
+		};
+		BA02382D22F13E9D003B4AF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RE5TD6CSG;
+				INFOPLIST_FILE = "wotabag-remoteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pmrowla.wotabag-remoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "wotabag-remote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA0237F822F13E9C003B4AF0 /* Build configuration list for PBXProject "wotabag-remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA02382322F13E9D003B4AF0 /* Debug */,
+				BA02382422F13E9D003B4AF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA02382522F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA02382622F13E9D003B4AF0 /* Debug */,
+				BA02382722F13E9D003B4AF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA02382822F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA02382922F13E9D003B4AF0 /* Debug */,
+				BA02382A22F13E9D003B4AF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA02382B22F13E9D003B4AF0 /* Build configuration list for PBXNativeTarget "wotabag-remoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA02382C22F13E9D003B4AF0 /* Debug */,
+				BA02382D22F13E9D003B4AF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA5E8B4B230A67D0001EA871 /* XCRemoteSwiftPackageReference "JSONRPCKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fxwx23/JSONRPCKit";
+			requirement = {
+				branch = "xcode10-swift4.2";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA5E8B4C230A67D0001EA871 /* JSONRPCKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA5E8B4B230A67D0001EA871 /* XCRemoteSwiftPackageReference "JSONRPCKit" */;
+			productName = JSONRPCKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BA0237F522F13E9C003B4AF0 /* Project object */;
+}

@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "JSONRPCKit",
+        "repositoryURL": "https://github.com/fxwx23/JSONRPCKit",
+        "state": {
+          "branch": "xcode10-swift4.2",
+          "revision": "8faf73b69d1465c9a0c2f6fff0a9e6ce1063357f",
+          "version": null
+        }
+      },
+      {
+        "package": "Result",
+        "repositoryURL": "https://github.com/antitypical/Result.git",
+        "state": {
+          "branch": null,
+          "revision": "2ca499ba456795616fbc471561ff1d963e6ae160",
+          "version": "4.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
