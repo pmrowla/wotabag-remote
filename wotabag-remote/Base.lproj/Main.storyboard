@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ULB-N0-9Xj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ULB-N0-9Xj">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -87,7 +88,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="speaker.fill" catalog="system" maximumValueImage="speaker.3.fill" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-1q-5yw" userLabel="Volume Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" minimumValueImage="speaker.fill" catalog="system" maximumValueImage="speaker.wave.3.fill" translatesAutoresizingMaskIntoConstraints="NO" id="sOb-1q-5yw" userLabel="Volume Slider">
                                                 <rect key="frame" x="-2" y="61.5" width="347" height="31"/>
                                                 <connections>
                                                     <action selector="wotabagVolumeSliderChanged:" destination="etz-Vb-RTV" eventType="valueChanged" id="3hF-ra-glU"/>
@@ -96,7 +97,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RCL-K0-s0l">
                                                 <rect key="frame" x="0.0" y="91.5" width="343" height="44"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-Tr-cvV">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyh-Tr-cvV">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <state key="normal" title="Test LEDs"/>
@@ -117,7 +118,7 @@
                                                             <action selector="wotabagColorPickerDidBeginEditing:" destination="etz-Vb-RTV" eventType="editingDidBegin" id="PoL-hT-VVr"/>
                                                         </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02K-jM-k79">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02K-jM-k79">
                                                         <rect key="frame" x="243" y="0.0" width="100" height="44"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <state key="normal" title="Set color"/>
@@ -134,7 +135,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <state key="normal" title="Play" image="play.circle" catalog="system">
-                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemBlueColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="wotabagPlayButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="BSI-PF-XIq"/>
@@ -144,7 +145,7 @@
                                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                         <state key="normal" title="Stop" image="stop.circle" catalog="system">
-                                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" systemColor="systemBlueColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="wotabagStopButtonTouchUp:" destination="etz-Vb-RTV" eventType="touchUpInside" id="qPv-19-YtC"/>
@@ -182,6 +183,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="fau-eM-nyj"/>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="STT-B3-JyQ"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="MBl-P8-3Jd" firstAttribute="top" secondItem="STT-B3-JyQ" secondAttribute="top" id="Dyo-JW-vAE"/>
@@ -189,11 +191,10 @@
                             <constraint firstItem="MBl-P8-3Jd" firstAttribute="bottom" secondItem="STT-B3-JyQ" secondAttribute="bottom" id="kAf-Hd-7pc"/>
                             <constraint firstItem="MBl-P8-3Jd" firstAttribute="leading" secondItem="STT-B3-JyQ" secondAttribute="leading" id="q1O-wj-59Z"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="STT-B3-JyQ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wotabag Name" id="t7n-vd-c9e" userLabel="Wotabag Name">
                         <barButtonItem key="rightBarButtonItem" title="Power off" image="power" catalog="system" id="y96-k1-XUX">
-                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemRedColor"/>
                             <connections>
                                 <action selector="wotabagPowerButtonTouchUp:" destination="etz-Vb-RTV" id="t2F-c5-rr9"/>
                             </connections>
@@ -237,7 +238,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IfQ-TY-MNp">
                         <rect key="frame" x="0.0" y="0.0" width="343" height="427"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WotabagTracklistCell" id="4VD-Uu-xjA" customClass="WotabagTracklistCell" customModule="wotabag_remote" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="343" height="43.5"/>
@@ -272,10 +273,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play.circle" catalog="system" width="64" height="62"/>
-        <image name="power" catalog="system" width="62" height="64"/>
-        <image name="speaker.3.fill" catalog="system" width="64" height="44"/>
-        <image name="speaker.fill" catalog="system" width="50" height="64"/>
-        <image name="stop.circle" catalog="system" width="64" height="62"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="power" catalog="system" width="128" height="124"/>
+        <image name="speaker.fill" catalog="system" width="128" height="128"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
+        <image name="stop.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
